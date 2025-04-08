@@ -63,8 +63,8 @@ pipeline {
       stage('Docker Build and Push') {
       steps {
           sh  'docker login --username yjpjohn --password Abraham_77'
-          sh 'docker build -t codedecode25/restaurant-listing-service:${VERSION} .'
-          sh 'docker push codedecode25/restaurant-listing-service:${VERSION}'
+          sh 'docker build -t yjpjohn/restaurant-listing-service:${VERSION} .'
+          sh 'docker push  yjpjohn/restaurant-listing-service:${VERSION}'
       }
     } 
 
