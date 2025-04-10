@@ -27,7 +27,7 @@ pipeline {
 
     stage('SonarQube Analysis') {
   steps {
-    sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=http://3.21.98.241:9000/ -Dsonar.login=squ_253faf24016006c6b8bbb5b11b43b85e253614da'
+    sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=http://3.137.42.222:9000/ -Dsonar.login=squ_253faf24016006c6b8bbb5b11b43b85e253614da'
   }
 }
 
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     def token = "squ_253faf24016006c6b8bbb5b11b43b85e253614da"
-                    def sonarQubeUrl = "http://3.21.98.241:9000/api"
+                    def sonarQubeUrl = "http://3.137.42.222:9000/api"
                     def componentKey = "com.codeddecode:restaurantlisting"
                     def coverageThreshold = 80.0
 
